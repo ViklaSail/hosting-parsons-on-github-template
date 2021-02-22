@@ -239,6 +239,10 @@ Construct a program by dragging&amp;dropping and reordering lines. The construct
 
 
 # Parsons oma kokeilu
+Laskin kysyy luvun (operandi1) ja operaation (operaattori) kunnes saa operaattoriksi lopetusmerkin "L".
+Laskin käyttää edellisen laskutoimituksen tulosta seuraavan laskemiseen. Välitulos talletetaan operandi1-muuttujaan. 
+Lopuksi tulostetaan lopullinen tulos konsoliin.
+
 <div id="pekka1-sortableTrash" class="sortable-code"></div> 
 <div id="pekka1-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
