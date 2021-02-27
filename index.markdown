@@ -287,6 +287,174 @@ Lopuksi tulostetaan lopullinen tulos konsoliin.
 })(); 
 </script>
 
+### laskimen osa 1
+Saa parametrina laskutoimituksen ja tarkistaa sopiiko se nelilaskimen sallittuihin operaatioihin. Palauttaa totuusarvon. 
+
+<div id="pre1-sortableTrash" class="sortable-code"></div> 
+<div id="pre1-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="pre1-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="pre1-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "function tarkastaLaskutoimitus(operaattori){\n" +
+    "    var operators = [&quot;+&quot;, &quot;-&quot;, &quot;*&quot;, &quot;/&quot;,&quot;L&quot;];\n" +
+    "    var isValid = operators.includes(operaattori);\n" +
+    "    return isValid\n" +
+    "}";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "pre1-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#pre1-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#pre1-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+
+### laskimen osa 2
+Muuttaa merkkijonon numeroksi. Jos se ei onnistu palauttaa merkkijonon NaN. 
+<div id="pre2-sortableTrash" class="sortable-code"></div> 
+<div id="pre2-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="pre2-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="pre2-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "function konvertoiNumeroksi(luku){\n" +
+    "    var result = NaN;\n" +
+    "    if(isNaN(luku)){\n" +
+    "        result = NaN;\n" +
+    "    } else {\n" +
+    "        result = parseInt(luku);\n" +
+    "    }\n" +
+    "    return result\n" +
+    "}";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "pre2-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#pre2-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#pre2-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+
+### Laskimen osa 3
+Kysyy prompt-ikkunassa luvun. TArkistaa onko kyseessä luku ja kysyy uutta lukua kunnes käyttäjä antaa oikeasti luvun. 
+<div id="pre3-sortableTrash" class="sortable-code"></div> 
+<div id="pre3-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="pre3-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="pre3-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "function kysyLuku(valitulos,operaattori){\n" +
+    "   var luku = prompt(&quot;anna luku\n&quot;+valitulos+operaattori);\n" +
+    "   var tulos = konvertoiNumeroksi(luku);\n" +
+    "   while(isNaN(tulos))\n" +
+    "   {\n" +
+    "       luku = prompt(&quot;Ei ollut luku, anna luku\n&quot;+valitulos+operaattori);\n" +
+    "       tulos = konvertoiNumeroksi(luku);\n" +
+    "   }\n" +
+    "   return tulos;\n" +
+    "}";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "pre3-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#pre3-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#pre3-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+
+## LASKIMEN OSA 4
+Kysy operaattori-funktio kysyy nelilaskimen laskutoimitusta kunnes käyttäjä antaa "laillisen" laskutoimituksen. 
+
+<div id="pre4-sortableTrash" class="sortable-code"></div> 
+<div id="pre4-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="pre4-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="pre4-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "function kysyOperaattori(operandi){\n" +
+    "   var operaattori = prompt(&quot;anna laskutoimitus\n&quot;+operandi);\n" +
+    "   var validi = tarkastaLaskutoimitus(operaattori);\n" +
+    "   while(!validi){\n" +
+    "     operaattori = prompt(&quot;Virheellinen syöte, anna laskutoimitus\n&quot;+operandi);\n" +
+    "     validi = tarkastaLaskutoimitus(operaattori);\n" +
+    "   }\n" +
+    "   return operaattori\n" +
+    "}";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "pre4-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#pre4-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#pre4-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+
+
 ### Implementation Notes
 
 When you host multiple Parson's problems on a single markdown page, you need to add a unique prefix. You can easily do this in the Codio generator by typing a unique prefix into the "Prefix" textbox and pressing Enter/Return. Then you can simply copy-paste like normal.
