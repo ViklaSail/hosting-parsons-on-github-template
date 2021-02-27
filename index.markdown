@@ -424,10 +424,10 @@ Kysy operaattori-funktio kysyy nelilaskimen laskutoimitusta kunnes käyttäjä a
 <script type="text/javascript"> 
 (function(){
   var initial = "function kysyOperaattori(operandi){\n" +
-    "   var operaattori = prompt(&quot;anna laskutoimitus\n&quot;+operandi);\n" +
+    "   var operaattori = prompt(&quot;anna laskutoimitus &quot;+operandi);\n" +
     "   var validi = tarkastaLaskutoimitus(operaattori);\n" +
     "   while(!validi){\n" +
-    "     operaattori = prompt(&quot;Virheellinen syöte, anna laskutoimitus\n&quot;+operandi);\n" +
+    "     operaattori = prompt(&quot;Virheellinen syöte, anna laskutoimitus &quot;+operandi);\n" +
     "     validi = tarkastaLaskutoimitus(operaattori);\n" +
     "   }\n" +
     "   return operaattori\n" +
