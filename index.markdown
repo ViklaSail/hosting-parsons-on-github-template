@@ -380,11 +380,11 @@ Kysyy prompt-ikkunassa luvun. TArkistaa onko kyseessä luku ja kysyy uutta lukua
 <script type="text/javascript"> 
 (function(){
   var initial = "function kysyLuku(valitulos,operaattori){\n" +
-    "   var luku = prompt(&quot;anna luku\n&quot;+valitulos+operaattori);\n" +
+    "   var luku = prompt(&quot;anna luku &quot;+valitulos+operaattori);\n" +
     "   var tulos = konvertoiNumeroksi(luku);\n" +
     "   while(isNaN(tulos))\n" +
     "   {\n" +
-    "       luku = prompt(&quot;Ei ollut luku, anna luku\n&quot;+valitulos+operaattori);\n" +
+    "       luku = prompt(&quot;Ei ollut luku, anna luku &quot;+valitulos+operaattori);\n" +
     "       tulos = konvertoiNumeroksi(luku);\n" +
     "   }\n" +
     "   return tulos;\n" +
