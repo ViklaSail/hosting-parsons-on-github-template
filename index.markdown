@@ -427,7 +427,7 @@ Kysy operaattori-funktio kysyy nelilaskimen laskutoimitusta kunnes käyttäjä a
     "   var operaattori = prompt(&quot;anna laskutoimitus &quot;+operandi);\n" +
     "   var validi = tarkastaLaskutoimitus(operaattori);\n" +
     "   while(!validi){\n" +
-    "     operaattori = prompt(&quot;Virheellinen syöte, anna laskutoimitus &quot;+operandi);\n" +
+    "     operaattori = prompt(&quot;Virheellinen syöte, anna laskutoimitus &bsol;n &quot;+operandi);\n" +
     "     validi = tarkastaLaskutoimitus(operaattori);\n" +
     "   }\n" +
     "   return operaattori\n" +
