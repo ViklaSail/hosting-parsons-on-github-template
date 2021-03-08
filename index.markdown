@@ -6,6 +6,43 @@ layout: default
 title: Multiple Parson's Problems on One Page
 ---
 # Parsons Practice
+## parsons 0 oma kokeilu kärkeen. 
+tähän kokeilu, miten saa tuon boksin alle. 
+<div id="pre6-sortableTrash" class="sortable-code"></div> 
+<div id="pre6-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="pre6-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="pre6-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "ensimmäinen rivi \n toinen rivi \n kolmas rivi \n neljäs rivi \n" +
+    "viides rivi\n" +
+    "kuudes rivi\n" +
+    "Distraction #distractor";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "pre6-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "trashId": "pre6-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#pre6-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#pre6-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
 
 ## Parsons 1 (Line Based Grader) TESTI TEKSTIÄ TÄHÄN
 Re-arrange the blocks below so they print out "Hello World!"
@@ -19,7 +56,7 @@ Re-arrange the blocks below so they print out "Hello World!"
 </p>
 <script type="text/javascript">
 (function() {
-  var initial = "print(\"Hello\")\ntestirivi\ntoinentestirivi" +
+  var initial = "print(\"Hello\")\n" +
     "print(\" \")\n" +
     "print(\"World\")\n" +
     "print(\"!\")";
