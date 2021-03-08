@@ -17,10 +17,11 @@ tähän kokeilu, miten saa tuon boksin alle.
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "ensimmäinen rivi \n toinen rivi \n kolmas rivi \n neljäs rivi \n" +
+  var initial = "ensimmäinen rivi \\n toinen rivi \\n kolmas rivi \\n neljäs rivi \n" +
     "viides rivi\n" +
     "kuudes rivi\n" +
     "Distraction #distractor";
+  //var initial2 = ["ensimmäinen rivi \n toinen rivi \n kolmas rivi \n neljäs rivi \n",]
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "pre6-sortable",
     "max_wrong_lines": 10,
