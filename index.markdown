@@ -455,7 +455,7 @@ Kysy operaattori-funktio kysyy nelilaskimen laskutoimitusta kunnes käyttäjä a
 </script>
 
 # PARSONS PUZZLE BLOKKIKOKEILU
-Ei ruksia html-kohdassa pre5. 
+Ei ruksia html-kohdassa pre5. LISÄKSI UUSI KOODI
 <div id="pre5-sortableTrash" class="sortable-code"></div> 
 <div id="pre5-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
@@ -465,7 +465,7 @@ Ei ruksia html-kohdassa pre5.
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "var aika = new Date();\nvar paiva = aika.getDate();" +
+  var initial = "var aika = new Date();\nvar paiva = aika.getDate();\n" +
     "document.write(&quot;Nyt on &quot; + paiva + &quot;.&quot; + kuukausi + &quot;.&quot; + vuosi + &quot; ja kello on &quot; + tunnit + &quot;:&quot; + minuutit + &quot;:&quot; + sekunnit + &quot;.&quot;);";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "pre5-sortable",
