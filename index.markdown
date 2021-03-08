@@ -465,7 +465,7 @@ Ei ruksia html-kohdassa pre5.
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "var aika = new Date();\nvar paiva = aika.getDate();\n" +
+  var initial = "var aika = new Date();\nvar paiva = aika.getDate();" +
     "document.write(&quot;Nyt on &quot; + paiva + &quot;.&quot; + kuukausi + &quot;.&quot; + vuosi + &quot; ja kello on &quot; + tunnit + &quot;:&quot; + minuutit + &quot;:&quot; + sekunnit + &quot;.&quot;);";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "pre5-sortable",
