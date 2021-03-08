@@ -19,7 +19,7 @@ Re-arrange the blocks below so they print out "Hello World!"
 </p>
 <script type="text/javascript">
 (function() {
-  var initial = "print(\"Hello\")\n" +
+  var initial = "print\n(\"Hello\")\n" +
     "print(\" \")\n" +
     "print(\"World\")\n" +
     "print(\"!\")";
@@ -252,8 +252,7 @@ Lopuksi tulostetaan lopullinen tulos konsoliin.
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "function laskin(){\n" +
-    "    var operaattori = &quot;&quot;;\n" +
+  var initial = "function laskin(){\n    var operaattori = &quot;&quot;;\n" +
     "    var operandi1 = kysyLuku(&quot;0&quot;,operaattori);\n" +
     "    while (operaattori != &quot;L&quot;) {\n" +
     "        operaattori = kysyOperaattori(operandi1);\n" +
