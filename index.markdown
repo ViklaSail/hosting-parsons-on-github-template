@@ -32,15 +32,17 @@ tähän kokeilu, miten saa tuon boksin alle.
     "trashId": "pre6-sortableTrash"
   });
   parsonsPuzzle.init(initial);
-  console.log("HELLOWORLD")
+  console.log("HELLOWORLD");
   console.log(initial);
   parsonsPuzzle.shuffleLines();
   $("#pre6-newInstanceLink").click(function(event){ 
       event.preventDefault(); 
+      console.log("NEWinstance");
       parsonsPuzzle.shuffleLines(); 
   }); 
   $("#pre6-feedbackLink").click(function(event){ 
       event.preventDefault(); 
+      console.log("FEEDBACK");
       parsonsPuzzle.getFeedback(); 
   }); 
 })(); 
