@@ -455,7 +455,7 @@ Kysy operaattori-funktio kysyy nelilaskimen laskutoimitusta kunnes käyttäjä a
 </script>
 
 # PARSONS PUZZLE BLOKKIKOKEILU
-Ei ruksia html-kohdassa pre5. LISÄKSI UUSI KOODI
+Ei ruksia html-kohdassa pre5. LISÄKSI UUSI KOODI. kaikki js-osoitteet vaihdettu
 <div id="pre5-sortableTrash" class="sortable-code"></div> 
 <div id="pre5-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
