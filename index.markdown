@@ -7,7 +7,7 @@ title: Multiple Parson's Problems on One Page
 ---
 # Parsons Practice
 ## UUSI OTSIKKO
-testataan uusia koodiblokki-ominaisuuksia
+testataan uusia koodiblokki-ominaisuuksia TULEEKO TEKSTI NÄKYVIIN
 <div id="pre7-sortableTrash" class="sortable-code"></div> 
 <div id="pre7-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
