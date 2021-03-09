@@ -6,45 +6,8 @@ layout: default
 title: Multiple Parson's Problems on One Page
 ---
 # Parsons Practice
-## parsons -1 miinus yksi oma kokeilu
-<div id="sortableTrash" class="sortable-code"></div> 
-<div id="sortable" class="sortable-code"></div> 
-<div style="clear:both;"></div> 
-<p> 
-    <input id="feedbackLink" value="Get Feedback" type="button" /> 
-    <input id="newInstanceLink" value="Reset Problem" type="button" /> 
-</p> 
-<script type="text/javascript"> 
-(function(){
-  var initial = "ensimmäinen rivi\n" +
-    "toinen rivi \n\n" +
-    "kolmas rivi \n\n" +
-    "neljäs rivi \n" +
-    "viides rivi\n" +
-    "kuudes rivi\n";
-  var parsonsPuzzle = new ParsonsWidget({
-    "sortableId": "sortable",
-    "max_wrong_lines": 10,
-    "grader": ParsonsWidget._graders.LineBasedGrader,
-    "exec_limit": 2500,
-    "can_indent": true,
-    "x_indent": 50,
-    "lang": "en"
-  });
-  parsonsPuzzle.init(initial);
-  parsonsPuzzle.shuffleLines();
-  $("#newInstanceLink").click(function(event){ 
-      event.preventDefault(); 
-      parsonsPuzzle.shuffleLines(); 
-  }); 
-  $("#feedbackLink").click(function(event){ 
-      event.preventDefault(); 
-      parsonsPuzzle.getFeedback(); 
-  }); 
-})(); 
-</script>
 
-## parsons 0 oma kokeilu kärkeen. 
+## parsons 0 oma kokeilu kärkeen. TULEEKO TÄMÄ TEKSTI NÄKYVIIN
 tähän kokeilu, miten saa tuon boksin alle. 
 <div id="pre6-sortableTrash" class="sortable-code"></div> 
 <div id="pre6-sortable" class="sortable-code"></div> 
