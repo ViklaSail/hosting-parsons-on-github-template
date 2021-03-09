@@ -6,7 +6,9 @@ layout: default
 title: Multiple Parson's Problems on One Page
 ---
 # Parsons Practice
-
+## UUSI OTSIKKO
+tuleeko näkyviin heti?
+tähän uusi koodi
 ## parsons 0 oma kokeilu kärkeen. TULEEKO TÄMÄ TEKSTI NÄKYVIIN
 tähän kokeilu, miten saa tuon boksin alle. 
 <div id="pre6-sortableTrash" class="sortable-code"></div> 
