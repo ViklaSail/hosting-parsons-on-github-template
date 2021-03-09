@@ -17,12 +17,12 @@ testataan uusia koodiblokki-ominaisuuksia
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "YKKÖNEN\n//kommentti\n" +
-    "KAKKONEN rivi \n//kommentti\n" +
-    "KOLMONEN rivi \n//kommentti\n" +
-    "NELONEN rivi //kommentti\n" +
-    "VITONEN rivi//kommentti\n" +
-    "KUTONEN rivi\n//kommentti";
+  var initial = "YKKÖNEN rivi \n\n" +
+    "KAKKONEN rivi \n\n" +
+    "KOLMONEN rivi \n\n" +
+    "NELONEN rivi \n" +
+    "VITONEN rivi\n" +
+    "KUTONEN rivi\n";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "pre7-sortable",
     "max_wrong_lines": 10,
@@ -44,6 +44,8 @@ testataan uusia koodiblokki-ominaisuuksia
   }); 
 })(); 
 </script>
+
+
 tähän uusi koodi
 ## parsons 0 oma kokeilu kärkeen. TULEEKO TÄMÄ TEKSTI NÄKYVIIN
 tähän kokeilu, miten saa tuon boksin alle. 
