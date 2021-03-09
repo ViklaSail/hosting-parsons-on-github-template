@@ -17,10 +17,10 @@ testataan uusia koodiblokki-ominaisuuksia TULEEKO TEKSTI NÄKYVIIN
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "YKKÖNEN rivi \\nKAKKONEN rivi \\nKOLMONEN rivi \n\n" +
+  var initial = "YKKÖNEN rivi  \\n KAKKONEN rivi  \\n KOLMONEN rivi  \\n \n" +
     "NELONEN rivi \n" +
     "VITONEN rivi\n" +
-    "KUTONEN rivi\n";
+    "KUTONEN rivi \\n ";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "pre7-sortable",
     "max_wrong_lines": 10,
