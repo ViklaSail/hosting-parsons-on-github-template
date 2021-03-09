@@ -7,7 +7,43 @@ title: Multiple Parson's Problems on One Page
 ---
 # Parsons Practice
 ## UUSI OTSIKKO
-tuleeko näkyviin heti?
+testataan uusia koodiblokki-ominaisuuksia
+<div id="pre7-sortableTrash" class="sortable-code"></div> 
+<div id="pre7-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="pre7-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="pre7-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "YKKÖNEN\n//kommentti\n" +
+    "KAKKONEN rivi \n//kommentti\n" +
+    "KOLMONEN rivi \n//kommentti\n" +
+    "NELONEN rivi //kommentti\n" +
+    "VITONEN rivi//kommentti\n" +
+    "KUTONEN rivi\n//kommentti";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "pre7-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#pre7-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#pre7-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
 tähän uusi koodi
 ## parsons 0 oma kokeilu kärkeen. TULEEKO TÄMÄ TEKSTI NÄKYVIIN
 tähän kokeilu, miten saa tuon boksin alle. 
