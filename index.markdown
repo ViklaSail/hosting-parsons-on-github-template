@@ -17,9 +17,7 @@ testataan uusia koodiblokki-ominaisuuksia
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "YKKÖNEN rivi \n\n" +
-    "KAKKONEN rivi \n\n" +
-    "KOLMONEN rivi \n\n" +
+  var initial = "YKKÖNEN rivi \nKAKKONEN rivi \nKOLMONEN rivi \n\n" +
     "NELONEN rivi \n" +
     "VITONEN rivi\n" +
     "KUTONEN rivi\n";
