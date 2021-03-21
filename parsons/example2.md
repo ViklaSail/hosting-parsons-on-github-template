@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Example 2
+title: Tentti
 ---
 <div id="sortableTrash" class="sortable-code"></div>
 <div id="sortable" class="sortable-code"></div>

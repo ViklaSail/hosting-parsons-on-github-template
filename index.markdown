@@ -44,9 +44,9 @@ testataan uusia koodiblokki-ominaisuuksia TULEEKO TEKSTI NÄKYVIIN
 </script>
 
 
-tähän uusi koodi
-## parsons 0 oma kokeilu kärkeen. TULEEKO TÄMÄ TEKSTI NÄKYVIIN
-tähän kokeilu, miten saa tuon boksin alle. 
+
+## parsons 0 oma kokeilu kärkeen. 
+ 
 <div id="pre6-sortableTrash" class="sortable-code"></div> 
 <div id="pre6-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
