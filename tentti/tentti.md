@@ -2271,29 +2271,646 @@ Järjestä koodirivit ohjelmaksi joka tarkastaa annetusta lukuarvosta, että onk
 </script>
 
 
-## tehtävä 50
+## tehtävä 51
+Järjestä koodirivit ohjelmaksi. Ohjelma saa parametreina ympyrän keskipisteen koordinaatit, ympyrän säteen ja koordinaattipisteen. 
+Ohjelma tarkastaa onko annettu koordinaattipiste ympyrän sisällä. Ohjelma palauttaa totuusarvon. 
+syötteet: 
+Ympyrän keskipiste: (x, y)
+ympyrän säde: r
+ympyrän sisällä (oletettavasti, tätä testataan) oleva piste: (a, b)
+yksi mahdollinen ratkaisu: 
+<div id="P51-sortableTrash" class="sortable-code"></div> 
+<div id="P51-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="P51-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="P51-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "function check_a_point(a, b, x, y, r) {\n" +
+    "    var dist_points = (a - x) * (a - x) + (b - y) * (b - y);\n" +
+    "    r *= r;\n" +
+    "    if (dist_points < r) { \\n         return true; \\n \n" +
+    "    }\n" +
+    "    return false;\n" +
+    "} \\n console.log(check_a_point(0, 0, 2, 4, 6)); \\n ";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "P51-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "trashId": "P51-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#P51-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#P51-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+
+
+## tehtävä 52
+Järjestä koodirivit ohjelmaksi. Ohjelman funktio saa listan numeroita ja tarkastaa, ovatko listalla olevat numerot joko laskevassa tai nousevassa järjestyksessä. Yhden numeron merkkijonon tapauksessa palautetaan true. 
+
+<div id="P52-sortableTrash" class="sortable-code"></div> 
+<div id="P52-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="P52-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="P52-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "function is_monotonous(num) {\n" +
+    "    if (num.length === 1) {\n" +
+    "        return true;\n" +
+    "    }\n" +
+    "    var num_direction = num[1] - num[0];\n" +
+    "    for (var i = 0; i < num.length - 1; i++) {\n" +
+    "        if (num_direction * (num[i + 1] - num[i]) <= 0) {\n" +
+    "            return false;\n" +
+    "        }\n" +
+    "    }\n" +
+    "    return true;\n" +
+    "} \\n console.log(is_monotonous([1, 2, 3])); \\n console.log(is_monotonous([1, 2, 2])); \\n ";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "P52-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "trashId": "P52-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#P52-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#P52-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+
+
+
+## tehtävä 53
+Järjestä koodirivit ohjelmaksi. Toteutetaan funktio joka saa parametriksi merkkijonoja listassa ja palauttaa listan pisimmän merkkijonon. 
+
+<div id="P53-sortableTrash" class="sortable-code"></div> 
+<div id="P53-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="P53-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="P53-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "function longest_str_in_array(arra)\n" +
+    "{\n" +
+    "    var max_str = arra[0].length; \\n var ans = arra[0]; \\n \n" +
+    "    for (var i = 1; i < arra.length; i++) {\n" +
+    "        var maxi = arra[i].length;\n" +
+    "        if (maxi > max_str) {\n" +
+    "            ans = arra[i]; \\n max_str = maxi; \\n \n" +
+    "        }\n" +
+    "    }\n" +
+    "    return ans;\n" +
+    "} \\n console.log(longest_str_in_array([\"ab\", \"a\", \"abcd\"])); \\n console.log(longest_str_in_array([\"ab\", \"ab\", \"ab\"])); \\n ";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "P53-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "trashId": "P53-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#P53-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#P53-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+
+## tehtävä 54
+Järjestä koodirivit ohjelmaksi joka etsii annetusta listasta suurimman parillisen numeron.
+
+<div id="P54-sortableTrash" class="sortable-code"></div> 
+<div id="P54-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="P54-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="P54-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "function max_even(arra) {\n" +
+    "  arra.sort((x, y) => y - x);\n" +
+    "  for (var i = 0; i < arra.length; i++) {\n" +
+    "    if (arra[i] % 2 == 0)\n" +
+    "      return arra[i];\n" +
+    "  }\n" +
+    "} \\n console.log(max_even([20, 40, 200])); \\n console.log(max_even([20, 40, 200, 301])); \\n ";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "P54-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "trashId": "P54-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#P54-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#P54-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+## tehtävä 55
 Järjestä koodirivit ohjelmaksi joka 
 
-## tehtävä 50
-Järjestä koodirivit ohjelmaksi joka 
+## tehtävä 55
+Järjestä koodirivit ohjelmaksi. Tämä ohjelma saa parametriksi numeron ja antaa vastaukseksi ensimmäisen annettua numeroa suuremman alkuluvun. 
+<div id="P55-sortableTrash" class="sortable-code"></div> 
+<div id="P55-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="P55-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="P55-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "function next_Prime_num(num) {\n" +
+    "    for (var i = num + 1;; i++) {\n" +
+    "        var isPrime = true;\n" +
+    "        for (var d = 2; d * d <= i; d++) {\n" +
+    "            if (i % d === 0) {\n" +
+    "                isPrime = false;\n" +
+    "                break;\n" +
+    "            }\n" +
+    "        }\n" +
+    "        if (isPrime) {\n" +
+    "            return i;\n" +
+    "        }\n" +
+    "    }\n" +
+    "} \\n console.log(next_Prime_num(3)); \\n console.log(next_Prime_num(17)); \\n ";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "P55-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "trashId": "P55-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#P55-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#P55-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
 
-## tehtävä 50
-Järjestä koodirivit ohjelmaksi joka 
+## tehtävä 56
+Järjestä koodirivit ohjelmaksi. Funktio saa lukuarvon parametriksi. Ohjelma laskee tuon lukuarvon parillisten numeroiden määrän ja palauttaa sen. 
+<div id="P56-sortableTrash" class="sortable-code"></div> 
+<div id="P56-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="P56-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="P56-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "function even_digits(num) {\n" +
+    "  var ctr = 0;\n" +
+    "  while (num) {\n" +
+    "    ctr += num % 2 === 0; \\n num = Math.floor(num / 10); \\n \n" +
+    "  }\n" +
+    "  return ctr;\n" +
+    "} \\n console.log(even_digits(123)); \\n ";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "P56-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "trashId": "P56-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#P56-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#P56-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
 
-## tehtävä 50
-Järjestä koodirivit ohjelmaksi joka 
+## tehtävä 57
+Järjestä koodirivit ohjelmaksi. funktio poistaa kaikki merkit jotka esiintyvät useammin kuin kerran parametrina annetussa merkkijonossa. Palauttaa uuden merkkijonon. 
+<div id="P57-sortableTrash" class="sortable-code"></div> 
+<div id="P57-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="P57-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="P57-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "function remove_duplicate_cchars(str) {\n" +
+    "  var arr_char = str.split(\"\"); \\n var result_arr = []; \\n \n" +
+    "  for (var i = 0; i < arr_char.length; i++) {\n" +
+    "    if (str.indexOf(arr_char[i]) === str.lastIndexOf(arr_char[i]))\n" +
+    "      result_arr.push(arr_char[i]);\n" +
+    "    }\n" +
+    "  return result_arr.join(\"\");\n" +
+    "} \\n console.log(remove_duplicate_cchars(\"abcdabc\")); \\n console.log(remove_duplicate_cchars(\"python\")); \\n ";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "P57-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "trashId": "P57-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#P57-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#P57-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script> 
 
-## tehtävä 50
-Järjestä koodirivit ohjelmaksi joka 
+## tehtävä 58
+Järjestä koodirivit ohjelmaksi. Ohjelma tarkastaa annetun lukuarvon numeroista ovatko ne samoja vai eivät. jos kaikki lukuarvon numerot ovat sama numero, palautetaan tosi.  
 
-## tehtävä 50
-Järjestä koodirivit ohjelmaksi joka 
+<div id="P58-sortableTrash" class="sortable-code"></div> 
+<div id="P58-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="P58-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="P58-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "function test_same_digit(num) {\n" +
+    "  const first = num % 10;\n" +
+    "  while (num) {\n" +
+    "    if (num % 10 !== first) return false;\n" +
+    "       num = Math.floor(num / 10);\n" +
+    "  }\n" +
+    "  return true\n" +
+    "} \\n console.log(test_same_digit(1234)); \\n console.log(test_same_digit(1111)); \\n ";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "P58-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "trashId": "P58-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#P58-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#P58-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
 
-## tehtävä 50
-Järjestä koodirivit ohjelmaksi joka 
+## tehtävä 59
+Järjestä koodirivit ohjelmaksi. Funktio saa parametriksi kaksi taulukkoa ja laskee kuinka monta taulukon elementtiä löytyy molemmista taulukoista. 
+<div id="P59-sortableTrash" class="sortable-code"></div> 
+<div id="P59-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="P59-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="P59-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "function test_same_elements_both_arrays(arra1, arra2) {\n" +
+    "  let result = 0;\n" +
+    "  for(let i = 0; i < arra1.length; i++) {\n" +
+    "    for(let j = 0; j < arra2.length; j++){\n" +
+    "      if(arra1[i] === arra2[j])\n" +
+    "      {\n" +
+    "        result++;\n" +
+    "      }\n" +
+    "    }\n" +
+    "  }\n" +
+    "  return result;\n" +
+    "} \\n console.log(test_same_elements_both_arrays([1,2,3,4], [1,2,3,4])); \\n ";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "P59-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "trashId": "P59-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#P59-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#P59-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
 
-## tehtävä 50
-Järjestä koodirivit ohjelmaksi joka 
+## tehtävä 60
+Järjestä koodirivit ohjelmaksi. Funktiolle annetaan parametrina täysin toimiva suhteellisia polkuelementtejä sisältävä unix-hakemisto. Funktio poistaa tarpeettomat elementit polusta siten, että se edelleen osoittaa samaan paikkaan kuin alkuperäinen polku. 
+huom: continue-lause hyppäyttää kontrollin silmukan alkuun, jolloin sen jälkeen tulevat rivit jäävät suorittamatta. Tässä ratkaisussa hyödynnetään continue-lausetta for-silmukan sisässä. Muutoin rivien järjestys on pitkälti pääteltävissä siitä, miten muuttujia esitellään ja käytetään.
+
+<div id="P60-sortableTrash" class="sortable-code"></div> 
+<div id="P60-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="P60-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="P60-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "function simplify_path(main_path) {\n" +
+    "  var parts = main_path.split('/'), \\n       new_path = [], \\n       length = 0; \\n \n" +
+    "  for (var i = 0; i < parts.length; i++) {\n" +
+    "    var part = parts[i];\n" +
+    "    if (part === '.' || part === '' || part === '..') {\n" +
+    "      if (part === '..' && length > 0) {\n" +
+    "        length--;\n" +
+    "      }\n" +
+    "      continue;\n" +
+    "    }\n" +
+    "    new_path[length++] = part;\n" +
+    "  }\n" +
+    "  if (length === 0) {\n" +
+    "    return '/';\n" +
+    "  }\n" +
+    "  var result = '';\n" +
+    "  for (var i = 0; i < length; i++) {\n" +
+    "    result +=  '/'+new_path[i] ;\n" +
+    "  }\n" +
+    "  return result;\n" +
+    "} \\n console.log(simplify_path(\"/home/var/./www/../html//sql/\")); \\n ";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "P60-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "trashId": "P60-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#P60-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#P60-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+
+
+## tehtävä 61
+Järjestä koodirivit ohjelmaksi. funktio saa parametrina kokonaisluvun  n ja palauttaa sen perusteella komanteen potenssiin korotettujen numeroiden summan seuraavasti: 1^3 +  2^3 + 3^3 + 4^3 + .. n^3 
+<div id="P61-sortableTrash" class="sortable-code"></div> 
+<div id="P61-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="P61-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="P61-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "function sum_Of_Cubes(n) {\n" +
+    "  let sumn = 0;\n" +
+    "  for (let i = 1; i <= n; i++) {\n" +
+    "    sumn += i ** 3;\n" +
+    "  }\n" +
+    "  return sumn;\n" +
+    "} \\n console.log(sum_Of_Cubes(3)); \\n console.log(sum_Of_Cubes(4)); \\n ";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "P61-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "trashId": "P61-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#P61-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#P61-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+
+
+## tehtävä 62
+Järjestä koodirivit ohjelmaksi. funktio saa parametrina merkkijonon ja laskee kaikkien sen sisältämien numeroiden summan
+<div id="P62-sortableTrash" class="sortable-code"></div> 
+<div id="P62-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="P62-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="P62-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "function sum_digits_from_string(dstr) {\n" +
+    "  var dsum = 0;\n" +
+    "  for (var i = 0; i < dstr.length; i++)\n" +
+    "  {\n" +
+    "    if (/[0-9]/.test(dstr[i])) dsum += parseInt(dstr[i])\n" +
+    "  }\n" +
+    "  return dsum;\n" +
+    "} \\n console.log(sum_digits_from_string(\"abcd12efg9\")) \\n ";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "P62-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "trashId": "P62-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#P62-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#P62-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+
+## tehtävä 63
+Järjestä koodirivit ohjelmaksi. Funktio saa taulukon jossa on numeroita. jos taulukon pituus  on parillinen luku, esim 4, funktio vaihtaa taulukon alkupään ja loppypään paikkaa. Jos taulukko on [1,2,3,4], siitä tulee [3,4,1,2]. jos taulukon pituus on pariton luku, esim 5, palautetaan false. 
+<div id="P63-sortableTrash" class="sortable-code"></div> 
+<div id="P63-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="P63-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="P63-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "function halv_array_swap(iarra) {\n" +
+    "  if (((iarra.length)%2)!=0)\n" +
+    "  {\n" +
+    "    return false;\n" +
+    "  }\n" +
+    "  for (var i = 0; i < iarra.length / 2; i++) {\n" +
+    "    var tmp = iarra[i];\n" +
+    "    iarra[i] = iarra[i + iarra.length / 2];\n" +
+    "    iarra[i + iarra.length / 2] = tmp;\n" +
+    "  }\n" +
+    "  return iarra;\n" +
+    "} \\n console.log(halv_array_swap([1,2,3,4,5,6])) \\n console.log(halv_array_swap([1,2,3,4,5,6,7])) \\n ";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "P63-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "trashId": "P63-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#P63-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#P63-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+
+## tehtävä 64
+Järjestä koodirivit ohjelmaksi. Funktio saa parametrina merkkijonon ja vaihtaa siitä isot kirjamet pieniksi sekä pienet isoiksi. 
+
+<div id="P64-sortableTrash" class="sortable-code"></div> 
+<div id="P64-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="P64-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="P64-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "function change_case(txt) {\n" +
+    "    var str1 = \"\";\n" +
+    "    for (var i = 0; i < txt.length; i++) {\n" +
+    "        if (/[A-Z]/.test(txt[i])) str1 += txt[i].toLowerCase();\n" +
+    "        else str1 += txt[i].toUpperCase();\n" +
+    "    }\n" +
+    "    return str1;\n" +
+    "} \\n console.log(change_case(\"testiMERKKI\")); \\n console.log(change_case(\"Germany\")); \\n ";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "P64-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "trashId": "P64-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#P64-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#P64-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+
+
+
 
 
 # OHJELMOINTI-TEHTÄVIÄ
@@ -2325,3 +2942,33 @@ funktio tarkastaa onko kyseess ns. lävistäjä matriisi, eli vain matriisin vas
 ## tehtävä 3 helppo
 Kirjoita ohjelma joka tarkastaa onko annettu numero annetulla välillä. 
 Esimerkiksi annat ohjelmalle alarajan 4 ja ylärajan 10 sekä numeron 3. Ohjelman pitää palauttaa false, koska 3 ei ole annetulla välillä. 
+
+## tehtävä 4 vaikeahko
+Ohjelma saa parametreina ympyrän keskipisteen koordinaatit, ympyrän säteen ja koordinaattipisteen. 
+Ohjelma tarkastaa onko annettu koordinaattipiste ympyrän sisällä. Ohjelman palauttaa totuusarvon. 
+syötteet: 
+Ympyrän keskipiste: (x, y)
+ympyrän säde: r
+ympyrän sisällä (oletettavasti, tätä testataan) oleva piste: (a, b)
+## tehtävä 5
+Tee funktio joka saa kaksi totuusarvoa ja toteuttaa niiden välille NOR operaattorin. Käytä normaaleja and ja or sekä not operaatioita. Tämän pystyy tekemään yhdellä lauseella/rivillä. 
+NOR selitettynä: 
+(p NOR q) lause on tosi tarkalleen silloin kun sekä p että q ovat epätosia. Eli kun p ja q ovat false = p NOR q = true. 
+testaa tuotosta: anna parametreiksi
+true true  
+true false  
+false true  
+false false  
+
+Viimeisen parametrikaksikon pitäisi palauttaa true. 
+
+## tehtävä 6
+Kirjoita parseint ja numeron toString(2) funktioita käyttäen ohjelma, joka saa parametrinä kymmenjärjestelmän (eli desimaalijärjestelmän) luvun, muuttaa sen binääriseksi, vaihtaa binäärisen luvun bittien järjestyksen käänteiseksi ja muuntaa takasin desimaalijärjestelmän luvuksi joka palautetaan
+esim. 
+
+56 -> 111000 bittien kääntämisen jälkeen 7 -> 111
+234 -> 11101010 bittien kääntämisen jälkeen 87 -> 1010111
+
+## tehtävä 7 
+
+Tee funktio, joka saa parametrina listan numeroita. Jos listan pituus on pariton numero, palautetaan false. Muussa tapauksessa vaidetaan vierekkäiset alkiot toistensa kesken ja palautetaan uusi lista. 
