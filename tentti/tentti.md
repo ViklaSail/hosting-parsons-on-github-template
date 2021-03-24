@@ -3,9 +3,21 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
-title: Multiple Parson's Problems on One Page
+title: Tenttitehtävien varastoa
 ---
 # Parsons puzle tentti
+## Tenttitehtävien palautus. 
+Tälle sivulle on linkki moodle-tentissä. Tehtävät on numeroitu. 
+Valitse se tehtävänumero joka mainittiin moodlessa. 
+Ratkaise ja palauta moodleen arvioitavaksi oikean tehtvään tenttitulos.
+
+Ohje tehtävän palautukseen videolinkkinä tähän. 
+
+## tenttitehtävien ratkaisun yleistä ohjeistusta
+Sisennykset kohdalleen
+Return lause voi olla keskellä funktiota, vaikka se yleensä on lopussa. 
+Muuttujaa voi käyttää vasta sen jälkeen kun se on esitelty. 
+Aloitussulkeella on aina lopetussulje. 
 
 ## Tehtävä 1: konvertoi celcius-asteet fahrenheiteiksi
 
@@ -90,7 +102,7 @@ Tehtävä sisältää kaksi "harhautusriviä" jotka eivät kuulu ohjelmaan. Koko
 </script>
 
 ## tehtävä 3: Päivittelyä
-Seuraava ohjelma tarkasta onko tammikuun ensimmäinen päivä sunnuntai vuosien 2014 ja 2050 väliltä, ja tulostaa päivän jos näin on. 
+Seuraava ohjelma tarkasta onko tammikuun ensimmäinen päivä sunnuntai vuosien 2014 ja 2050 väliltä, ja tulostaa lokiin päivän jos näin on. 
 
 
 <div id="P3-sortableTrash" class="sortable-code"></div> 
@@ -564,8 +576,7 @@ Ratkaisussa on virhe, str_len pitää laittaa if-lauseen alkuun, vaikkei sitä k
   }); 
 })(); 
 </script>
-## tehtävä 14
-Järjestä koodirivit ohjelmaksi joka 
+
 
 ## tehtävä 14
 Järjestä koodirivit ohjelmaksi joka tarkastaa onko annetun merkkijonon alussa sana "java" ja siinä tapauksessa palauttaa arvon true. 
@@ -665,11 +676,10 @@ Järjestä koodirivit ohjelmaksi joka tarkastaa että kaksi annettua lukua on ar
   }); 
 })(); 
 </script>
-## tehtävä 16
-Järjestä koodirivit ohjelmaksi joka 
+
 
 ## tehtävä 16
-Järjestä koodirivit ohjelmaksi joka palauttaa annetuista kolmesta luvusta suurimman
+Järjestä koodirivit ohjelmaksi joka palauttaa annetuista kolmesta luvusta suurimman. käytä kaikki sulkeet. max_val = 0 asetuksesta puuttuu var tai let alusta, älä välitä siitä. Pari harhautusblokkia.
 
 <div id="P16-sortableTrash" class="sortable-code"></div> 
 <div id="P16-sortable" class="sortable-code"></div> 
@@ -825,7 +835,7 @@ Järjestä koodirivit ohjelmaksi joka  palauttaa suuremman kahdesta numerosta. L
 </script>
 
 ## tehtävä 19
-Järjestä koodirivit ohjelmaksi joka tarkastaa löytyykö annettu merkki annetussa merkkijonossa sen toisen ja neljännen merkkipositioiden välissä. 
+Järjestä koodirivit ohjelmaksi joka tarkastaa löytyykö annettu merkki annetussa merkkijonossa sen toisen ja neljännen merkkipositioiden välissä. Tehtävässä ei ole yhtään harhautusblokkia.
 
 
 <div id="P19-sortableTrash" class="sortable-code"></div> 
@@ -1001,7 +1011,7 @@ Järjestä koodirivit erikoislaskimeksi joka laskee kaksi lukua yhteen ja palaut
 </script>
 
 ## tehtävä 23
-Järjestä koodirivit ohjelmaksi joka tarkastaa kaksi annettua kokonaislukua, että onko jonpi kumpi 8 tai onko niiden summa 8 tai onko niiden ero 8. Palauttaa totuusarvon
+Järjestä koodirivit ohjelmaksi joka tarkastaa kaksi annettua kokonaislukua, että onko jonpi kumpi 8 tai onko niiden summa 8 tai onko niiden ero 8. Palauttaa totuusarvon. Tehtävässä virhe: if-lauseiden järjestyksellä väliä, jos ei mene läpi, vaihda niiden järjestystä. 
 <div id="P23-sortableTrash" class="sortable-code"></div> 
 <div id="P23-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
@@ -1177,7 +1187,8 @@ Järjestä koodirivit ohjelmaksi joka muodostaa uuden merkkijonon parametriksi s
 
 
 ## tehtävä 27
-Järjestä koodirivit ohjelmaksi joka saa parametriksi merkkijonon. Jos merkkijonon pituus on pariton luku ja suurempi kuin 3, luodaan uusi merkkijono ottamalla kolme keskimmäistä merkkiä parametrina saadusta merkkijonosta. 
+Järjestä koodirivit ohjelmaksi joka saa parametriksi merkkijonon. Jos merkkijonon pituus on pariton luku ja suurempi kuin 3, luodaan uusi merkkijono ottamalla kolme keskimmäistä merkkiä parametrina saadusta merkkijonosta. Muussa tapauksessa palautetaan alkuperäinen merkkijono. 
+
 <div id="P27-sortableTrash" class="sortable-code"></div> 
 <div id="P27-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
@@ -1534,7 +1545,8 @@ Järjestä koodirivit ohjelmaksi, joka saa parametriksi taulukon. Ohjelma etsii 
 </script>
 
 ## tehtävä 35
-Järjestä koodirivit ohjelmaksi joka etsii annetusta integertaulukosta sen numeron joka esiintyy lukumääräisesti eniten 
+Järjestä koodirivit ohjelmaksi joka etsii annetusta integertaulukosta sen numeron joka esiintyy lukumääräisesti eniten. 
+
 <div id="P35-sortableTrash" class="sortable-code"></div> 
 <div id="P35-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
@@ -1994,7 +2006,12 @@ Järjestä koodirivit ohjelmaksi joka etsii parametrina annetusta numerolistasta
 </script>
 
 ## tehtävä 45
-Järjestä koodirivit ohjelmaksi joka saa parametrina jaettavan numeron ja jakajan. Ohjelma jakaa jaettavan niin monta kertaa kuin jako menee tasan ja tallentaa tuloksen uudelleen jaettavaksi. Lopullinen jakolaskun tulos palautetaan. 
+Järjestä koodirivit ohjelmaksi joka saa parametrina jaettavan numeron ja jakajan. 
+Jos jakaja on 1, palautetaan jaettava numero. 
+Muussa tapauksessa Ohjelma jakaa jaettavan jakajalla niin monta kertaa kuin jako menee tasan ja tallentaa tuloksen uudelleen jaettavaksi. 
+Kun jako ei enää mene tasan, palautetaan tulos. Jakojäännöksen saa % operaattorilla. 
+
+
 <div id="P45-sortableTrash" class="sortable-code"></div> 
 <div id="P45-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
@@ -2131,7 +2148,8 @@ Tässä palapelissä sillä ei ole väliä, pystyt päättelemään rivien järj
 
 
 ## tehtävä 48
-Järjestä koodirivit ohjelmaksi joka tulostaa alkuluvut parametrina annettuun lukuun asti. Alkuluku on luku joka on jaollinen vain yhdellä ja itsellään. Tässä yksi mahdollinen ratkaisu.
+Järjestä koodirivit ohjelmaksi joka listaa alkuluvut parametrina ykkösestä annettuun lukuun num- asti. Alkuluku on luku joka on jaollinen vain yhdellä ja itsellään. Tässä yksi mahdollinen ratkaisu.
+Ensin tehdään num-mittainen lista jonka alkoina on true-arvo. Sitten käydään silmukassa läpi luvut 2 - num. Silmukan sisällä... tämä on liian vaikea. 
 <div id="P48-sortableTrash" class="sortable-code"></div> 
 <div id="P48-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
@@ -2548,7 +2566,7 @@ Järjestä koodirivit ohjelmaksi. Funktio saa lukuarvon parametriksi. Ohjelma la
 </script>
 
 ## tehtävä 57
-Järjestä koodirivit ohjelmaksi. funktio poistaa kaikki merkit jotka esiintyvät useammin kuin kerran parametrina annetussa merkkijonossa. Palauttaa uuden merkkijonon. 
+Järjestä koodirivit ohjelmaksi. funktio poistaa kaikki merkit jotka esiintyvät useammin kuin kerran parametrina annetussa merkkijonossa. Palauttaa uuden merkkijonon. TEHTÄVÄSSÄ VIRHE. for lauseen lopetussulje pitää sisentää askelen liikaa, sitten menee "läpi" (if-tasolle)
 <div id="P57-sortableTrash" class="sortable-code"></div> 
 <div id="P57-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
